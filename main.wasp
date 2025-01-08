@@ -1,9 +1,9 @@
-app OpenSaaS {
+app RESOLVE {
   wasp: {
     version: "^0.15.0"
   },
 
-  title: "My Open SaaS App",
+  title: "RESOLVE",
 
   head: [
     "<meta charset='utf-8' />",
