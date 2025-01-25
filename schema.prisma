@@ -29,6 +29,7 @@ model User {
   contactFormMessages       ContactFormMessage[]
   tasks                     Task[]
   files                     File[]
+  products                  Product[]       // Add this line to establish the relationship
 }
 
 model GptResponse {
@@ -112,4 +113,24 @@ model ContactFormMessage {
   content                   String
   isRead                    Boolean         @default(false)
   repliedAt                 DateTime?
+}
+model Product {
+  id                        String          @id @default(uuid())
+  createdAt                 DateTime        @default(now())
+  updatedAt                 DateTime        @updatedAt
+
+  name                      String
+  description               String
+  price                     Float
+  isAvailable               Boolean         @default(true)
+  imageUrl                  String?         // URL to the product image
+  category                  String?         // Optional category for the product
+
+  // Relationship to the User who listed the product
+  user                      User            @relation(fields: [userId], references: [id])
+  userId                    String
+
+  // Optional fields for additional details
+  stockQuantity             Int             @default(1)
+  tags                      String[]        // Array of tags for the product
 }
