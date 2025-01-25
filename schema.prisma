@@ -29,7 +29,8 @@ model User {
   contactFormMessages       ContactFormMessage[]
   tasks                     Task[]
   files                     File[]
-  products                  Product[]       // Add this line to establish the relationship
+  products                  Product[]       // Relationship to Product
+  reviews                   Review[]        // Relationship to Review
 }
 
 model GptResponse {
@@ -114,6 +115,13 @@ model ContactFormMessage {
   isRead                    Boolean         @default(false)
   repliedAt                 DateTime?
 }
+model Category {
+  id                        String          @id @default(uuid())
+  name                      String          @unique
+  description               String?
+  products                  Product[]
+}
+
 model Product {
   id                        String          @id @default(uuid())
   createdAt                 DateTime        @default(now())
@@ -123,14 +131,33 @@ model Product {
   description               String
   price                     Float
   isAvailable               Boolean         @default(true)
-  imageUrl                  String?         // URL to the product image
-  category                  String?         // Optional category for the product
+  imageUrl                  String?
 
-  // Relationship to the User who listed the product
   user                      User            @relation(fields: [userId], references: [id])
   userId                    String
 
-  // Optional fields for additional details
   stockQuantity             Int             @default(1)
-  tags                      String[]        // Array of tags for the product
+  tags                      String[]
+  // Relationship to Category
+  category                  Category?       @relation(fields: [categoryId], references: [id])
+  categoryId                String?
+
+  // Relationship to Review
+  reviews                   Review[]        // Reviews for this product
+}
+model Review {
+  id                        String          @id @default(uuid())
+  createdAt                 DateTime        @default(now())
+  updatedAt                 DateTime        @updatedAt
+
+  rating                    Int             // e.g., 1 to 5 stars
+  comment                   String?
+
+  // Relationship to User (who wrote the review)
+  user                      User            @relation(fields: [userId], references: [id])
+  userId                    String
+
+   // Relationship to Product (the product being reviewed)
+  product                   Product         @relation(fields: [productId], references: [id])
+  productId                 String
 }
