@@ -274,6 +274,11 @@ page AdminUsersPage {
   component: import AdminUsers from "@src/admin/dashboards/users/UsersDashboardPage"
 }
 
+route AdminAddProductsRoute { path: "/admin/products", to: AdminAddProductsPage }
+page AdminAddProductsPage {
+  authRequired: true,
+  component: import AdminAddProduct from "@src/admin/dashboards/products/AddProduct"
+}
 route AdminSettingsRoute { path: "/admin/settings", to: AdminSettingsPage }
 page AdminSettingsPage {
   authRequired: true,
