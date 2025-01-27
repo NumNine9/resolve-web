@@ -350,3 +350,15 @@ job sendNewsletter {
   entities: [User]
 }
 //#endregion
+
+//#region Items
+action createItem {
+  fn: import { createItem } from "@src/server/actions/item.js",
+  entities: [Item]
+}
+
+//#endregion
+
+//#region Newsletter
+
+//#endregion
