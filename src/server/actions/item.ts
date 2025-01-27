@@ -1,9 +1,9 @@
 import { Item } from 'wasp/entities';
+import { type CreateItem } from 'wasp/server/operations';
 import { CreateItemArgs } from '../../types';
 
-
 // Implement the action
-export const createItem = async (args: CreateItemArgs, context: any): Promise<Item> => {
+export const createItem: CreateItem<{ name: string, description: string, price: number, isAvailable: boolean }, Item> = async (args, context): Promise<Item> => {
   const { name, description, price, isAvailable } = args;
 
   // Validate required fields

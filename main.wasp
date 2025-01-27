@@ -352,8 +352,8 @@ job sendNewsletter {
 //#endregion
 
 //#region Items
-action createItem {
-  fn: import { createItem } from "@src/server/actions/item.js",
+query createItem {
+  fn: import { createItem } from "@src/server/actions/item",
   entities: [Item]
 }
 
