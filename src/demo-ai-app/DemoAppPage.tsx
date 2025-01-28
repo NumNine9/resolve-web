@@ -14,31 +14,80 @@ import { CgSpinner } from 'react-icons/cg';
 import { TiDelete } from 'react-icons/ti';
 import type { GeneratedSchedule, MainTask, SubTask } from './schedule';
 import { cn } from '../client/cn';
+import CategoryCard from './CategoryPage';
+
+
+const categories = [
+  { 
+    readMoreLink: "sample readmore",
+    description: "This is a sample description",
+    title: "Marketplace",
+    imageUrl:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image_2025-01-27_233034134-2x5bEiHoSV2GiTP5M8RYz1JTNGuQVt.png",
+    alt: "Web and Mobile Development illustration",
+  },
+  {
+    readMoreLink: "sample readmore",
+    description: "This is a sample description",
+    title: "Library",
+    imageUrl:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image_2025-01-27_233034134-2x5bEiHoSV2GiTP5M8RYz1JTNGuQVt.png",
+    alt: "Design and Creative illustration",
+  },
+  {
+    readMoreLink: "sample readmore",
+    description: "This is a sample description",
+    title: "Rentals",
+    imageUrl:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image_2025-01-27_233034134-2x5bEiHoSV2GiTP5M8RYz1JTNGuQVt.png",
+    alt: "Content Writers illustration",
+  },
+
+]
 
 export default function DemoAppPage() {
   return (
-    <div className='py-10 lg:mt-10'>
-      <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-        <div className='mx-auto max-w-4xl text-center'>
-          <h2 className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white'>
-            <span className='text-yellow-500'>AI</span> Day Scheduler
-          </h2>
-        </div>
-        <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-white'>
-          This example app uses OpenAI's chat completions with function calling to return a structured JSON object. Try
-          it out, enter your day's tasks, and let AI do the rest!
-        </p>
-        {/* begin AI-powered Todo List */}
-        <div className='my-8 border rounded-3xl border-gray-900/10 dark:border-gray-100/10'>
-          <div className='sm:w-[90%] md:w-[70%] lg:w-[50%] py-10 px-6 mx-auto my-8 space-y-10'>
-            <NewTaskForm handleCreateTask={createTask} />
-          </div>
-        </div>
-        {/* end AI-powered Todo List */}
+    <main className="container mx-auto px-4 py-16">
+      <div className="text-center mb-16">
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">Explore Freelancers</h1>
+        <div className="h-1 w-48 bg-emerald-400 mx-auto" />
       </div>
+
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {categories.map((category, index) => (
+          <CategoryCard key={index} {...category} />
+        ))}
+      </div> */}
+      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  {categories.map((category, index) => (
+    <div
+      key={index}
+      className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-500"
+    >
+      <CategoryCard
+        imageUrl={category.imageUrl}
+        title={category.title}
+        description={category.description}
+        readMoreLink={category.readMoreLink}
+      />
     </div>
-  );
+  ))}
+</div>
+
+
+      <div className="text-center mt-12">
+        <p className="text-gray-600">
+          Don't see what you're looking for?{" "}
+          <a href="#" className="text-emerald-500 hover:text-emerald-600">
+            See all categories
+          </a>
+        </p>
+      </div>
+    </main>
+  )
 }
+
+
 
 function NewTaskForm({ handleCreateTask }: { handleCreateTask: typeof createTask }) {
   const [description, setDescription] = useState<string>('');

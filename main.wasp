@@ -158,6 +158,12 @@ page DemoAppPage {
   component: import DemoAppPage from "@src/demo-ai-app/DemoAppPage"
 }
 
+route CategoryPageRoute { path: "/category-page", to: CategoryPage }
+page CategoryPage {
+  authRequired: true,
+  component: import CategoryPage from "@src/demo-ai-app/CategoryPage"
+}
+
 action generateGptResponse {
   fn: import { generateGptResponse } from "@src/demo-ai-app/operations",
   entities: [User, Task, GptResponse]
