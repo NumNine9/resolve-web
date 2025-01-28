@@ -164,6 +164,12 @@ page CategoryPage {
   component: import CategoryPage from "@src/demo-ai-app/CategoryPage"
 }
 
+route MarketPageRoute { path: "/category-page/marketplace", to: MarketPage }
+page MarketPage {
+  authRequired: true,
+  component: import MarketPage from "@src/client/pages/MarketPage"
+}
+
 action generateGptResponse {
   fn: import { generateGptResponse } from "@src/demo-ai-app/operations",
   entities: [User, Task, GptResponse]

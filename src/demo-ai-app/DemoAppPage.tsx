@@ -1,5 +1,5 @@
 import { type Task } from 'wasp/entities';
-
+// import { useParams } from 'react-router-dom';
 import {
   generateGptResponse,
   deleteTask,
@@ -19,9 +19,10 @@ import CategoryCard from './CategoryPage';
 
 const categories = [
   { 
-    readMoreLink: "sample readmore",
+    readMoreLink: "/category-page/marketplace",
     description: "This is a sample description",
     title: "Marketplace",
+    page: "marketplace",
     imageUrl:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image_2025-01-27_233034134-2x5bEiHoSV2GiTP5M8RYz1JTNGuQVt.png",
     alt: "Web and Mobile Development illustration",
@@ -30,6 +31,7 @@ const categories = [
     readMoreLink: "sample readmore",
     description: "This is a sample description",
     title: "Library",
+    page: "library",
     imageUrl:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image_2025-01-27_233034134-2x5bEiHoSV2GiTP5M8RYz1JTNGuQVt.png",
     alt: "Design and Creative illustration",
@@ -38,6 +40,7 @@ const categories = [
     readMoreLink: "sample readmore",
     description: "This is a sample description",
     title: "Rentals",
+    page: "rentals",
     imageUrl:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image_2025-01-27_233034134-2x5bEiHoSV2GiTP5M8RYz1JTNGuQVt.png",
     alt: "Content Writers illustration",
@@ -62,6 +65,7 @@ export default function DemoAppPage() {
   {categories.map((category, index) => (
     <div
       key={index}
+      // onClick={() => Navigate(`/category/${category.page}`)}
       className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-500"
     >
       <CategoryCard
