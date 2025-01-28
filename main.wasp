@@ -368,7 +368,10 @@ query createItem {
   fn: import { createItem } from "@src/server/actions/item",
   entities: [Item]
 }
-
+query getAllItems {
+  fn: import { getAllItems } from "@src/server/actions/item",
+  entities: [Item]
+}
 //#endregion
 
 //#region Newsletter
