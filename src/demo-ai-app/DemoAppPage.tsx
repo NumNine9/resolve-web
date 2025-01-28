@@ -50,9 +50,9 @@ const categories = [
 
 export default function DemoAppPage() {
   return (
-    <main className="container mx-auto px-4 py-16">
+    <main className="container mx-auto px-4 py-5">
       <div className="text-center mb-16">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Explore Freelancers</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-1">Explore Categories</h1>
         <div className="h-1 w-48 bg-emerald-400 mx-auto" />
       </div>
 

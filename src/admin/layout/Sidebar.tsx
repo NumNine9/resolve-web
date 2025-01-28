@@ -263,11 +263,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           </div>
 
           {/* <!-- Others Group --> */}
-          <div>
+          {/* <div>
             <h3 className='mb-4 ml-4 text-sm font-semibold text-bodydark2'>Extra Components</h3>
 
             <ul className='mb-6 flex flex-col gap-1.5'>
-              {/* <!-- Menu Item Chart --> */}
+              
               <li>
                 <NavLink
                   to='/admin/chart'
@@ -307,9 +307,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   Chart
                 </NavLink>
               </li>
-              {/* <!-- Menu Item Chart --> */}
-
-              {/* <!-- Menu Item Forms --> */}
+              
               <SidebarLinkGroup activeCondition={pathname === '/forms' || pathname.includes('forms')}>
                 {(handleClick, open) => {
                   return (
@@ -375,7 +373,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           />
                         </svg>
                       </NavLink>
-                      {/* <!-- Dropdown Menu Start --> */}
+                     
                       <div className={cn('translate transform overflow-hidden', { hidden: !open })}>
                         <ul className='mt-4 mb-5.5 flex flex-col gap-2.5 pl-6'>
                           <li>
@@ -406,14 +404,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           </li>
                         </ul>
                       </div>
-                      {/* <!-- Dropdown Menu End --> */}
+                      
                     </React.Fragment>
                   );
                 }}
               </SidebarLinkGroup>
-              {/* <!-- Menu Item Forms --> */}
-
-              {/* <!-- Menu Item Calendar --> */}
+          
               <li>
                 <NavLink
                   to='/admin/calendar'
@@ -442,9 +438,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   Calendar
                 </NavLink>
               </li>
-              {/* <!-- Menu Item Calendar --> */}
-
-              {/* <!-- Menu Item Ui Elements --> */}
+              
               <SidebarLinkGroup activeCondition={pathname === '/ui' || pathname.includes('ui')}>
                 {(handleClick, open) => {
                   return (
@@ -509,7 +503,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           />
                         </svg>
                       </NavLink>
-                      {/* <!-- Dropdown Menu Start --> */}
+                      
                       <div className={cn('translate transform overflow-hidden', { hidden: !open })}>
                         <ul className='mt-4 mb-5.5 flex flex-col gap-2.5 pl-6'>
                           <li>
@@ -540,16 +534,16 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           </li>
                         </ul>
                       </div>
-                      {/* <!-- Dropdown Menu End --> */}
+                     
                     </React.Fragment>
                   );
                 }}
               </SidebarLinkGroup>
-              {/* <!-- Menu Item Ui Elements --> */}
+             
             </ul>
-          </div>
+          </div> */}
         </nav>
-        {/* <!-- Sidebar Menu --> */}
+      
       </div>
     </aside>
   );
