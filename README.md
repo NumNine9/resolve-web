@@ -1,9 +1,9 @@
 # RESOLVE CODEBASE
 
-## Dropbox link for Sprint 1: 
-https://www.dropbox.com/scl/fi/veld0z0ucdf0knniomo2c/final-demo.mp4?rlkey=m6i7iue9grx2s1wgdnm83626h&st=50irgy5s&dl=0
-## Dropbox link for Sprint 2: 
-https://screenrec.com/share/62iChkrfMA
+### Screen Recodinglink for Sprint 1: https://www.dropbox.com/scl/fi/veld0z0ucdf0knniomo2c/final-demo.mp4?rlkey=m6i7iue9grx2s1wgdnm83626h&st=50irgy5s&dl=0
+
+### Screen Recoding link for Sprint 2: https://screenrec.com/share/62iChkrfMA
+
 
 This project is based on requirements requested by a client and consists of three main dirs:
 1. `app` - Your web app, built with [React](https://react.dev/reference/react) and [Typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html).
