@@ -50,15 +50,21 @@ export default function App() {
 
   return (
     <>
-      <div className='min-h-screen dark:text-white dark:bg-boxdark-2'>
+      <div className='min-h-screen min-w-full dark:text-white dark:bg-boxdark-2'>
         {isAdminDashboard ? (
+          <>
+          {/* Admin Dashboard */}
           <Outlet />
+          </>
+          
         ) : (
           <>
-            {shouldDisplayAppNavBar && <NavBar navigationItems={navigationItems} />}
-            <div className='mx-auto max-w-7xl sm:px-6 lg:px-8'>
-              <Outlet />
-            </div>
+            {/* {shouldDisplayAppNavBar && <NavBar navigationItems={navigationItems} />} */}
+            {/* <div className='mx-auto min-w-full sm:px-6 lg:px-8'>
+              Student Dashboard
+              
+            </div> */}
+            <Outlet />
           </>
         )}
       </div>

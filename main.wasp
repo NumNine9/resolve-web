@@ -339,6 +339,14 @@ page NotFoundPage {
 }
 //#endregion
 
+
+//#region Student
+route StudentDashbooardRoute{ path: "/student/dashboard", to: StudentDashbooardPage }
+page StudentDashbooardPage {
+  authRequired: true,
+  component: import { NotFoundPage } from "@src/client/components/NotFoundPage"
+}
+//#endregion
 //#region Contact Form Messages
 // TODO: 
 // add functionality to allow users to send messages to admin

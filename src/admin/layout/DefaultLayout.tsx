@@ -8,7 +8,7 @@ interface Props {
   children?: ReactNode;
 }
 
-const DefaultLayout: FC<Props> = ({ children, user }) => {
+const DefaultLayout: FC<Props> = ({ children, user}) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -16,7 +16,7 @@ const DefaultLayout: FC<Props> = ({ children, user }) => {
       {/* <!-- ===== Page Wrapper Start ===== --> */}
       <div className='flex h-screen overflow-hidden'>
         {/* <!-- ===== Sidebar Start ===== --> */}
-        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} user={user} />
         {/* <!-- ===== Sidebar End ===== --> */}
 
         {/* <!-- ===== Content Area Start ===== --> */}
