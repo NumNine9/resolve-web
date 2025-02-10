@@ -462,7 +462,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, user }: SidebarProps) => {
               {/* <!-- Menu Item Assessments --> */}
               <li>
                 <NavLink
-                  to='/student/materials'
+                  to='/student/assessments'
                   className={({ isActive }) =>
                     cn(
                       'group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-gray-700 dark:hover:bg-meta-4',

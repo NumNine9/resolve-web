@@ -344,8 +344,41 @@ page NotFoundPage {
 route StudentDashbooardRoute{ path: "/student/dashboard", to: StudentDashbooardPage }
 page StudentDashbooardPage {
   authRequired: true,
-  component: import { NotFoundPage } from "@src/client/components/NotFoundPage"
+  component: import Dashboard from "@src/student/Dashboard" 
 }
+route StudentLessonsRoute{ path: "/student/lessons", to: StudentLessonsPage }
+page StudentLessonsPage {
+  authRequired: true,
+  component: import Lessons from "@src/student/Lessons" 
+}
+route StudentScheduleRoute{ path: "/student/schedule", to: StudentSchedulePage }
+page StudentSchedulePage {
+  authRequired: true,
+  component: import Schedule from "@src/student/Schedule" 
+}
+route StudentMaterialsRoute{ path: "/student/materials", to: StudentMaterialsPage }
+page StudentMaterialsPage {
+  authRequired: true,
+  component: import Materials from "@src/student/Materials" 
+}
+route StudentForumRoute{ path: "/student/forum", to: StudentForumPage }
+page StudentForumPage {
+  authRequired: true,
+  component: import Forum from "@src/student/Forum" 
+}
+route StudentAssessmentsRoute{ path: "/student/assessments", to: StudentAssessmentsPage }
+page StudentAssessmentsPage {
+  authRequired: true,
+  component: import Assessments from "@src/student/Assessments" 
+}
+route StudentSettingsRoute{ path: "/student/settings", to: StudentSettingsPage }
+page StudentSettingsPage {
+  authRequired: true,
+  component: import Settings from "@src/student/Settings" 
+}
+
+
+
 //#endregion
 //#region Contact Form Messages
 // TODO: 
