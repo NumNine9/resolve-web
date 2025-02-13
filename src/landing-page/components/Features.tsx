@@ -4,6 +4,8 @@ interface Feature {
   icon: string;
   href: string;
 };
+import { categoriesList } from '../../demo-ai-app/DemoAppPage';
+import CategoryCard from '../../demo-ai-app/CategoryPage';
 
 export default function Features({ features }: { features: Feature[] }) {
   return (
@@ -17,7 +19,7 @@ export default function Features({ features }: { features: Feature[] }) {
           <br /> Work smarter.
         </p>
       </div>
-      <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
+      {/* <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
         <dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'>
           {features.map((feature) => (
             <div key={feature.name} className='relative pl-16'>
@@ -31,7 +33,57 @@ export default function Features({ features }: { features: Feature[] }) {
             </div>
           ))}
         </dl>
+      </div> */}
+
+      {/* {categoriesList.map((category, index) => (
+            <div
+              key={index}
+              // onClick={() => Navigate(`/category/${category.page}`)}
+              className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-500"
+            >
+              <CategoryCard
+                imageUrl={category.imageUrl}
+                title={category.title}
+                description={category.description}
+                readMoreLink={category.readMoreLink}
+              />
+            </div>
+          ))} */}
+
+{/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4">
+  {categoriesList.map((category, index) => (
+    <div
+      key={index}
+      // onClick={() => Navigate(`/category/${category.page}`)}
+      className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-500"
+    >
+      <CategoryCard
+        imageUrl={category.imageUrl}
+        title={category.title}
+        description={category.description}
+        readMoreLink={category.readMoreLink}
+      />
+    </div>
+  ))}
+</div> */}
+<div className="flex justify-center items-center">
+  <div className="flex overflow-x-auto gap-4 py-4 max-w-full">
+    {categoriesList.map((category, index) => (
+      <div
+        key={index}
+        // onClick={() => Navigate(`/category/${category.page}`)}
+        className="flex-shrink-0 w-64 bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-500"
+      >
+        <CategoryCard
+          imageUrl={category.imageUrl}
+          title={category.title}
+          description={category.description}
+          readMoreLink={category.readMoreLink}
+        />
       </div>
+    ))}
+  </div>
+</div>
     </div>
   )
 }

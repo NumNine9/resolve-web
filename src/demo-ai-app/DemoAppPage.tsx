@@ -19,7 +19,7 @@ import CategoryCard from './CategoryPage';
 import DefaultLayout from '../admin/layout/DefaultLayout';
 
 
-const categories = [
+export const categoriesList = [
   { 
     readMoreLink: "/category-page/marketplace",
     description: "This is a sample description",
@@ -66,7 +66,7 @@ export default function DemoAppPage({ user }: { user: AuthUser }) {
           ))}
         </div> */}
         <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-    {categories.map((category, index) => (
+    {/* {categories.map((category, index) => (
       <div
         key={index}
         // onClick={() => Navigate(`/category/${category.page}`)}
@@ -79,7 +79,7 @@ export default function DemoAppPage({ user }: { user: AuthUser }) {
           readMoreLink={category.readMoreLink}
         />
       </div>
-    ))}
+    ))} */}
   </div>
 
 
