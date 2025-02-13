@@ -5,6 +5,7 @@ import Features from './components/Features';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 export default function LandingPage() {
   return (
@@ -13,6 +14,7 @@ export default function LandingPage() {
         <Hero />
         <Features features={features} />
         <Testimonials testimonials={testimonials} />
+        <Contact />
         <Clients />
         <FAQ faqs={faqs} />
       </main>
