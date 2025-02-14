@@ -59,6 +59,7 @@ export default function App() {
           
         ) : (
           <>
+            {shouldDisplayAppNavBar&& isLandingPage && <NavBar navigationItems={navigationItems} />}
             {/* {shouldDisplayAppNavBar && <NavBar navigationItems={navigationItems} />} */}
             {/* <div className='mx-auto min-w-full sm:px-6 lg:px-8'>
               Student Dashboard

@@ -19,27 +19,14 @@ export default function Features({ features }: { features: Feature[] }) {
           <br /> Work smarter.
         </p>
       </div>
-      {/* <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
-        <dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'>
-          {features.map((feature) => (
-            <div key={feature.name} className='relative pl-16'>
-              <dt className='text-base font-semibold leading-7 text-gray-900 dark:text-white'>
-                <div className='absolute left-0 top-0 flex h-10 w-10 items-center justify-center border border-yellow-400 bg-yellow-100/50 dark:bg-boxdark rounded-lg'>
-                  <div className='text-2xl'>{feature.icon}</div>
-                </div>
-                {feature.name}
-              </dt>
-              <dd className='mt-2 text-base leading-7 text-gray-600 dark:text-white'>{feature.description}</dd>
-            </div>
-          ))}
-        </dl>
-      </div> */}
 
-      {/* {categoriesList.map((category, index) => (
+      <div className="flex justify-center items-center">
+        <div className="flex overflow-x-auto gap-4 py-4 max-w-full">
+          {categoriesList.map((category, index) => (
             <div
               key={index}
               // onClick={() => Navigate(`/category/${category.page}`)}
-              className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-500"
+              className="flex-shrink-0 w-64 bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-500"
             >
               <CategoryCard
                 imageUrl={category.imageUrl}
@@ -48,42 +35,9 @@ export default function Features({ features }: { features: Feature[] }) {
                 readMoreLink={category.readMoreLink}
               />
             </div>
-          ))} */}
-
-{/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4">
-  {categoriesList.map((category, index) => (
-    <div
-      key={index}
-      // onClick={() => Navigate(`/category/${category.page}`)}
-      className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-500"
-    >
-      <CategoryCard
-        imageUrl={category.imageUrl}
-        title={category.title}
-        description={category.description}
-        readMoreLink={category.readMoreLink}
-      />
-    </div>
-  ))}
-</div> */}
-<div className="flex justify-center items-center">
-  <div className="flex overflow-x-auto gap-4 py-4 max-w-full">
-    {categoriesList.map((category, index) => (
-      <div
-        key={index}
-        // onClick={() => Navigate(`/category/${category.page}`)}
-        className="flex-shrink-0 w-64 bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-500"
-      >
-        <CategoryCard
-          imageUrl={category.imageUrl}
-          title={category.title}
-          description={category.description}
-          readMoreLink={category.readMoreLink}
-        />
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-</div>
     </div>
   )
 }

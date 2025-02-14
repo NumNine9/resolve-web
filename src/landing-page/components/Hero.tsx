@@ -17,17 +17,14 @@ export default function Hero() {
             By fueling Ambitions, One Click at a Time
             </p>
             <div className='mt-10 flex items-center justify-center gap-x-6'>
-              <a
-                href={DocsUrl}
-                className='rounded-md px-3.5 py-2.5 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-200 hover:ring-2 hover:ring-yellow-300 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:text-white'
-              >
+              
                 <WaspRouterLink to={routes.LoginRoute.to}>
                                     <div className='flex justify-end items-center duration-300 ease-in-out text-gray-900 hover:text-yellow-500 dark:text-white'>
                                     Get Started <span aria-hidden='true'>→</span>
                                     </div>
                                   </WaspRouterLink>
                 {/* Get Started  */}
-              </a>
+              
             </div>
           </div>
           <div className='mt-14 flow-root sm:mt-14'>

@@ -114,7 +114,7 @@ export default function AppNavBar({ navigationItems }: { navigationItems: Naviga
   );
 }
 
-function renderNavigationItems(
+export function renderNavigationItems(
   navigationItems: NavigationItem[],
   setMobileMenuOpen?: Dispatch<SetStateAction<boolean>>
 ) {

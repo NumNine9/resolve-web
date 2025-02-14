@@ -3,12 +3,15 @@ import MessageButton from '../../messages/MessageButton';
 import DropdownUser from '../../user/DropdownUser';
 import { cn } from '../../client/cn';
 import DarkModeSwitcher from '../../client/components/DarkModeSwitcher';
+import { appNavigationItems } from '../../client/components/NavBar/contentSections';
+import { renderNavigationItems } from '../../client/components/NavBar/NavBar';
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
   user: AuthUser;
 }) => {
+  
   return (
     <header className='sticky top-0 z-999 flex w-full bg-white dark:bg-boxdark dark:drop-shadow-none'>
       <div className='flex flex-grow items-center justify-between sm:justify-end sm:gap-5 px-8 py-5 shadow '>
@@ -75,6 +78,8 @@ const Header = (props: {
         </div>
 
         <ul className='flex items-center gap-2 2xsm:gap-4'>
+          {/* <div>{appNavigationItems}</div> */}
+          <div className='hidden lg:flex lg:gap-x-12'>{renderNavigationItems(appNavigationItems)}</div>
           {/* <!-- Dark Mode Toggler --> */}
           <DarkModeSwitcher />
           {/* <!-- Dark Mode Toggler --> */}
